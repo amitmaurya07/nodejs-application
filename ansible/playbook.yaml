@@ -24,7 +24,7 @@
     - name: Run NodeJS Application
       community.general.npm:
         path: /apps/nodejs-app/
-        executable: /apps/nodejs-app/app.js
+        executable: node /apps/nodejs-app/app.js
         state: present
       
       
