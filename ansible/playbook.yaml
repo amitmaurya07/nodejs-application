@@ -23,6 +23,7 @@
         path: /apps/nodejs-app/pacakage.json 
     - name: Run NodeJS Application
       community.general.npm:
+        path: /apps/nodejs-app/
         executable: /apps/nodejs-app/app.js
         state: present
       
