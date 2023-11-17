@@ -20,9 +20,8 @@
         clone: yes
     - name: Install package.json packages
       community.general.npm:
-        path: /apps/nodejs-app/pacakage.json 
+        path: /apps/nodejs-app/package.json 
     - name: Run NodeJS Application
-      community.general.npm:
         path: /apps/nodejs-app/
         executable: npm start /apps/nodejs-app/package.json
         # state: present

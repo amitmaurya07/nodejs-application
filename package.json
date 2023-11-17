@@ -9,8 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "package.json": "^2.0.1"
-  }
+  "license": "ISC"
 }
