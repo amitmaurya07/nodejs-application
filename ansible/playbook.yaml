@@ -22,6 +22,8 @@
       community.general.npm:
         path: /apps/nodejs-app/pacakage.json 
     - name: Run NodeJS Application
-      command: npm start
+      community.general.npm:
+        executable: /apps/nodejs-app/app.js
+        state: present
       
       
