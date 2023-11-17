@@ -20,5 +20,7 @@
         clone: yes
     - name: Install package.json packages 
       command: npm install
+    - name: Run NodeJS Application
+      command: npm start
       
       
