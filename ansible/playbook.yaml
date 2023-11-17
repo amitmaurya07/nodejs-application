@@ -24,6 +24,6 @@
     - name: Run NodeJS Application
       command: npm start
       args:
-        chdir: /apps/nodejs-app/package.json
+        chdir: /apps/nodejs-app/
       
       
