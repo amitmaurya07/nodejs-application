@@ -1,6 +1,6 @@
 - name: Install node and npm
   hosts: nodejs_servers
-  become_user: root
+  become: yes
   tasks: 
     - name: Update apt repo
       apt : update_cache=yes force_apt_get=yes
