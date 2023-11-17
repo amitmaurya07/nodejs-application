@@ -2,10 +2,10 @@
   "name": "nodejs-application",
   "version": "1.0.0",
   "description": "Sample NodeJS Application",
-  "main": "app.js",
+  "main": "/apps/nodejs-app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node /apps/nodejs-app/app.js"
   },
   "keywords": [],
   "author": "",
