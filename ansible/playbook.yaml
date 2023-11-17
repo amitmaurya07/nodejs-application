@@ -1,0 +1,5 @@
+- name: Install node and npm
+  hosts: nodejs_servers
+  tasks: 
+    - name: Update apt repo
+      apt : update_cache=yes force_apt_get=yes
