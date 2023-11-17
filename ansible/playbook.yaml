@@ -16,7 +16,7 @@
     - name: Git checkout
       ansible.builtin.git:
         repo: 'https://github.com/amitmaurya07/nodejs-application.git'
-        dest: /apps/nodejs-app
+        dest: /
         clone: yes
     - name: Install package.json packages 
       command: npm pack
