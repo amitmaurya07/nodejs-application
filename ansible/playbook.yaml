@@ -4,3 +4,8 @@
   tasks: 
     - name: Update apt repo
       apt : update_cache=yes force_apt_get=yes
+    - name: Install nodejs and npm 
+      apt:
+       pkg:
+         - nodejs
+         - npm
