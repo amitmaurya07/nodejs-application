@@ -22,8 +22,8 @@
       community.general.npm:
         path: /apps/nodejs-app/package.json 
     - name: Run NodeJS Application
-        path: /apps/nodejs-app/
-        executable: npm start /apps/nodejs-app/package.json
-        # state: present
+      command: npm start
+      args:
+        chdir: /apps/nodejs-app/package.json
       
       
