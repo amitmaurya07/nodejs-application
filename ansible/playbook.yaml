@@ -13,11 +13,11 @@
   hosts: nodejs_servers
   become: yes 
   tasks:
-- name: Unarchive a file that needs to be downloaded (added in 2.0)
-  ansible.builtin.unarchive:
-    src: https://example.com/example.zip
-    dest: /usr/local/bin
-    remote_src: yes
+    - name: Unarchive a file that needs to be downloaded (added in 2.0)
+      ansible.builtin.unarchive:
+        src: https://nexus.neuralcompany.team/#browse/browse:npm-hosted:nodejs-app-amit%2Fnodejs-app-amit-0.0.1.tgz
+        dest: /usr/local/bin
+        remote_src: yes
     - name: Install package.json packages 
       command: npm install package.json
     - name: Run NodeJS Application
