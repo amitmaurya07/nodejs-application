@@ -17,3 +17,4 @@
       ansible.builtin.git:
         repo: 'https://github.com/amitmaurya07/nodejs-application.git'
         dest: /apps/nodejs-app
+        clone: yes
