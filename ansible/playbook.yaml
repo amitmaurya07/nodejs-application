@@ -19,8 +19,9 @@
         dest: /apps/nodejs-app
         clone: yes
     - name: Install package.json packages
-      community.general.npm:
-        path: /apps/nodejs-app/package.json 
+      command: npm install
+      args:
+        chdir: /apps/nodejs-app/package.json 
     - name: Run NodeJS Application
       command: npm start
       args:
