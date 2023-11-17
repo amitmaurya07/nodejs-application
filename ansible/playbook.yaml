@@ -13,11 +13,11 @@
   hosts: nodejs_servers
   become: yes 
   tasks:
-    - name: Git checkout
-      ansible.builtin.git:
-        repo: 'https://github.com/amitmaurya07/nodejs-application.git'
-        dest: /apps/nodejs-app
-        clone: yes
+- name: Unarchive a file that needs to be downloaded (added in 2.0)
+  ansible.builtin.unarchive:
+    src: https://example.com/example.zip
+    dest: /usr/local/bin
+    remote_src: yes
     - name: Install package.json packages 
       command: npm install package.json
     - name: Run NodeJS Application
