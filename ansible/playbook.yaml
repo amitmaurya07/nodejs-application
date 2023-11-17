@@ -18,9 +18,8 @@
         repo: 'https://github.com/amitmaurya07/nodejs-application.git'
         dest: /apps/nodejs-app
         clone: yes
-    - name: Install package.json packages 
-      chdir: /apps/nodejs-app
-      command: npm pack
+    - name: Install package.json packages
+      command: npm install /apps/nodejs-app/package.json
     - name: Run NodeJS Application
       command: npm start
       
