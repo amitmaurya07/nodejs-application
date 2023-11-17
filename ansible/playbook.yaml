@@ -13,11 +13,11 @@
   hosts: nodejs_servers
   become: yes 
   tasks:
-    - name: Unarchive a file that needs to be downloaded (added in 2.0)
-      ansible.builtin.unarchive:
-        src: http://localhost:8081/repository/npm-hosted/nodejs-app-amit/-/nodejs-app-amit-0.0.1.tgz
-        dest: /usr/local/bin
-        remote_src: yes
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: 'https://github.com/amitmaurya07/nodejs-application.git'
+        dest: /apps/nodejs-app
+        clone: yes
     - name: Install package.json packages 
       command: npm install package.json
     - name: Run NodeJS Application
