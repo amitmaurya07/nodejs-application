@@ -1,2 +1,2 @@
 [nodejs_servers]
-10.182.0.4 ansible_ssh_pass=amit ansible_ssh_user=amitmau7878
+10.182.0.4 ansible_ssh_user=amitmau7878
