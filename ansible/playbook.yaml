@@ -24,9 +24,6 @@
         dest: /apps/nodejs-app  
         clone: yes
 
-    - name: Install package.json packages
-      command: npm install /apps/nodejs-app
-
     - name: Startup the application through pm2 
       command: pm2 startup
 
