@@ -23,7 +23,12 @@
         repo: 'https://github.com/amitmaurya07/nodejs-application.git'
         dest: /apps/nodejs-app
         clone: yes
-        # version: amit/v2
+        version: amit/v2
+    
+    - name: Install Depenedencies
+      command: npm install 
+      args:
+        chdir: /apps/nodejs-app
 
     - name: Startup the application through pm2 
       command: pm2 startup
