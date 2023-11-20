@@ -11,8 +11,8 @@
          - npm
          - python3-pip
     - name: Install pm2 server for nodeJS Application
-      ansible.builtin.pip:
-        name: pm2
+      command: npm install pm2 -g
+      state: present
 - name: deploy NodeJS App
   hosts: nodejs_servers
   become: yes 
