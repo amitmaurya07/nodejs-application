@@ -12,7 +12,7 @@
          - python3-pip
     - name: Install pm2 server for nodeJS Application
       command: npm install pm2 -g
-      state: present
+      # state: present
 - name: deploy NodeJS App
   hosts: nodejs_servers
   become: yes 
