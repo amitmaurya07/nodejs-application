@@ -9,6 +9,7 @@
        pkg:
          - nodejs
          - npm
+         - python3-pip
     - name: Install pm2 server for nodeJS Application
       ansible.builtin.pip:
         name: pm2
