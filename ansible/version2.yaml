@@ -29,6 +29,9 @@
       command: npm install 
       args:
         chdir: /apps/nodejs-app
+      
+    - name: Delete the pm2 process 
+      command: pm2 delete app
 
     - name: Startup the application through pm2 
       command: pm2 startup
