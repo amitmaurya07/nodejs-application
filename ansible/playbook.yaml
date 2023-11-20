@@ -26,9 +26,13 @@
     #   command: npm install
     #   args:
     #     chdir: /apps/nodejs-app/package.json
-    - name: Run NodeJS Application
+    - name: Startup the application through pm2 
       command: pm2 startup
+
+    - name: Run NodeJS Application
       command: pm2 start /apps/nodejs-app/app.js 
+
+    - name: Save the Current process so that when application will be rebooted, it will start the application
       command: pm2 save
       # args:
       #   chdir: /apps/nodejs-app/app.js
