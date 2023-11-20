@@ -1,4 +1,4 @@
-- name: Install node and npm
+- name: Install node, npm and pm2
   hosts: nodejs_servers
   become: yes
   tasks: 
@@ -9,6 +9,9 @@
        pkg:
          - nodejs
          - npm
+    - name: Install pm2 server for nodeJS Application
+      ansible.builtin.pip:
+        name: pm2
 - name: deploy NodeJS App
   hosts: nodejs_servers
   become: yes 
@@ -26,6 +29,6 @@
       command: npm start
       args:
         chdir: /apps/nodejs-app/
-      async: 1000
-      poll: 0
+      # async: 1000
+      # poll: 0
       
