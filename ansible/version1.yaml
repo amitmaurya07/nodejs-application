@@ -24,6 +24,9 @@
         dest: /apps/nodejs-app  
         clone: yes
         version: amit/v1
+    
+    - name: Stopping all pm2 servers 
+      command: pm2 delete all
 
     - name: Startup the application through pm2 
       command: pm2 startup
