@@ -14,7 +14,7 @@
     - name: Install pm2 server for nodeJS Application
       command: npm install pm2 -g
 
-- name: deploy NodeJS App
+- name: Deploy NodeJS App
   hosts: nodejs_servers
   become: yes 
   tasks:
@@ -25,7 +25,7 @@
         clone: yes
 
     - name: Install package.json packages
-      command: npm install /apps/nodejs-app/package.json
+      command: npm install /apps/nodejs-app
 
     - name: Startup the application through pm2 
       command: pm2 startup
