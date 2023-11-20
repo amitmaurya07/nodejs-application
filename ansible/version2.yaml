@@ -1,5 +1,5 @@
 - name: Install node, npm and pm2
-  hosts: nodejs_servers
+  hosts: nodejs_servers_version_v2
   become: yes
   tasks: 
     - name: Update apt repo
@@ -15,14 +15,15 @@
       command: npm install pm2 -g
 
 - name: Deploy NodeJS App
-  hosts: nodejs_servers
+  hosts: nodejs_servers_version_v2
   become: yes 
   tasks:
     - name: Git checkout
       ansible.builtin.git:
         repo: 'https://github.com/amitmaurya07/nodejs-application.git'
-        dest: /apps/nodejs-app  
+        dest: /apps/nodejs-app
         clone: yes
+        version: amit/v2
 
     - name: Startup the application through pm2 
       command: pm2 startup

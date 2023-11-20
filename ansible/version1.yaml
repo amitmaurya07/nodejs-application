@@ -1,0 +1,35 @@
+- name: Install node, npm and pm2
+  hosts: nodejs_servers_version_v1
+  become: yes
+  tasks: 
+    - name: Update apt repo
+      apt : update_cache=yes force_apt_get=yes
+
+    - name: Install nodejs and npm 
+      apt:
+       pkg:
+         - nodejs
+         - npm
+
+    - name: Install pm2 server for nodeJS Application
+      command: npm install pm2 -g
+
+- name: Deploy NodeJS App
+  hosts: nodejs_servers_version_v1
+  become: yes 
+  tasks:
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: 'https://github.com/amitmaurya07/nodejs-application.git'
+        dest: /apps/nodejs-app  
+        clone: yes
+        version: amit/v1
+
+    - name: Startup the application through pm2 
+      command: pm2 startup
+
+    - name: Run NodeJS Application
+      command: pm2 start -f /apps/nodejs-app/app.js 
+
+    - name: Save the Current process so that when application will be rebooted, it will start the application
+      command: pm2 save 
