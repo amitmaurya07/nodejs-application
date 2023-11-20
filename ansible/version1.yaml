@@ -24,6 +24,7 @@
         dest: /apps/nodejs-app  
         clone: yes
         version: amit/v1
+        force: yes
 
     - name: Startup the application through pm2 
       command: pm2 startup
