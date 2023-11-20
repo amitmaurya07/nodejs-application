@@ -32,7 +32,3 @@
 
     - name: Save the Current process so that when application will be rebooted, it will start the application
       command: pm2 save 
-
-    - name: List the pm2 process 
-      command: pm2 list
-      
