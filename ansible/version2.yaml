@@ -38,7 +38,7 @@
       command: pm2 startup
 
     - name: Run NodeJS Application
-      command: pm2 start -f --name: version2 /apps/nodejs-app/app.js 
+      command: pm2 start -f --name version2 /apps/nodejs-app/app.js 
 
     - name: Save the Current process so that when application will be rebooted, it will start the application
       command: pm2 save 
