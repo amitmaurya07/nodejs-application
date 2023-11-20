@@ -23,7 +23,7 @@
         repo: 'https://github.com/amitmaurya07/nodejs-application.git'
         dest: /apps/nodejs-app
         clone: yes
-        version: amit/v2
+        # version: amit/v2
 
     - name: Startup the application through pm2 
       command: pm2 startup
