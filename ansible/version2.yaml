@@ -21,7 +21,7 @@
     - name: Git checkout
       ansible.builtin.git:
         repo: 'https://github.com/amitmaurya07/nodejs-application.git'
-        dest: /apps/nodejs-app
+        dest: /apps/version2
         clone: yes
         version: amit/v2
         force: yes
@@ -29,7 +29,7 @@
     - name: Install Depenedencies
       command: npm install 
       args:
-        chdir: /apps/nodejs-app
+        chdir: /apps/version2
       
     # - name: Delete the pm2 process 
     #   command: pm2 delete app
@@ -38,7 +38,7 @@
       command: pm2 startup
 
     - name: Run NodeJS Application
-      command: pm2 start -f --name version2 /apps/nodejs-app/app.js 
+      command: pm2 start -f --name version2 /apps/version2/app.js 
 
     - name: Save the Current process so that when application will be rebooted, it will start the application
       command: pm2 save 
