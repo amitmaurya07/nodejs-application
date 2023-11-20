@@ -31,8 +31,8 @@
       args:
         chdir: /apps/version2
       
-    # - name: Delete the pm2 process 
-    #   command: pm2 delete app
+    - name: Delete the pm2 process 
+      command: pm2 delete version2
 
     - name: Startup the application through pm2 
       command: pm2 startup
