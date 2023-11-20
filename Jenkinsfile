@@ -8,7 +8,13 @@ pipeline {
         stage("Checkout") {
             steps {
                 script {
+                if (params.DEPLOY == 'V1') {
+                    git branch: 'amit/v1', url: 'https://github.com/amitmaurya07/nodejs-application.git'
+                } else if (params.DEPLOY == 'V2') {
                     git branch: 'amit/v2', url: 'https://github.com/amitmaurya07/nodejs-application.git'
+                } else {
+                    sh 'echo "No Parameter has been selected"'
+                }
                 }
             }
         }
