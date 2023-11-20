@@ -25,9 +25,7 @@
         clone: yes
 
     - name: Install package.json packages
-      command: npm install
-      args:
-        chdir: /apps/nodejs-app/package.json
+      command: npm install /apps/nodejs-app/package.json
 
     - name: Startup the application through pm2 
       command: pm2 startup
