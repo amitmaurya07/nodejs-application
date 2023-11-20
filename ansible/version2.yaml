@@ -24,6 +24,7 @@
         dest: /apps/nodejs-app
         clone: yes
         version: amit/v2
+        force: yes
     
     - name: Install Depenedencies
       command: npm install 
