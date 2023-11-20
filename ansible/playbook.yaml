@@ -27,7 +27,9 @@
     #   args:
     #     chdir: /apps/nodejs-app/package.json
     - name: Run NodeJS Application
-      command: pm2 start /apps/nodejs-app/app.js
+      command: pm2 startup
+      command: pm2 start /apps/nodejs-app/app.js 
+      command: pm2 save
       # args:
       #   chdir: /apps/nodejs-app/app.js
       # async: 1000
