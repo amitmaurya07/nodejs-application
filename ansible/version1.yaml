@@ -18,12 +18,18 @@
   hosts: nodejs_servers_version_v1
   become: yes 
   tasks:
-    - name: Git checkout
-      ansible.builtin.git:
-        repo: 'https://github.com/amitmaurya07/nodejs-application.git'
-        dest: /apps/nodejs-app  
-        clone: yes
-        version: amit/v1
+    # - name: Git checkout
+    #   ansible.builtin.git:
+    #     repo: 'https://github.com/amitmaurya07/nodejs-application.git'
+    #     dest: /apps/nodejs-app  
+    #     clone: yes
+    #     version: amit/v1
+
+    - name: Pull from Nexus
+      ansible.builtin.unarchive:
+        src: "http://localhost:8081/repository/npm-hosted/nodejs-app-amit/-/nodejs-app-amit-0.0.1.tgz"
+        dest: /apps/nodejs-app/
+        remote_src: yes
     
     - name: Stopping all pm2 servers 
       command: pm2 delete all
