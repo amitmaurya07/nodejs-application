@@ -16,7 +16,7 @@
   become_user: amitmau7878
   tasks:
     - name: Unarchive the Artifacts.
-      unarchive:
+      ansible.builtin.unarchive:
         src: "http://localhost:8081/repository/npm-hosted/nodejs-app-amit/-/nodejs-app-amit-0.0.1.tgz"
         dest: /apps/nodejs-app
         remote_src: true
