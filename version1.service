@@ -1,0 +1,12 @@
+[Unit]
+Description=appjs - making your environment variables rad
+After=network.target
+
+[Service]
+Environment=PORT=6443
+User=amitmau7878
+ExecStart=/usr/bin/node /apps/nodejs-app/app.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
