@@ -1,6 +1,6 @@
 - name: Install node, npm and pm2
   hosts: nodejs_servers_version_v1
-  become_user: amitmau7878
+  become: yes
   tasks: 
     - name: Update apt repo
       apt : update_cache=yes force_apt_get=yes
