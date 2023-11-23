@@ -1,6 +1,6 @@
 [nodejs_servers_version_v1]
-10.182.0.4 
-10.182.0.5 
+10.182.0.4 ansible_ssh_user=amitmau7878
+10.182.0.5 ansible_ssh_user=amitmau7878
 
 [nodejs_servers_version_v2]
 10.182.0.5 ansible_ssh_user=amitmau7878 ansible_ssh_pass=amit
