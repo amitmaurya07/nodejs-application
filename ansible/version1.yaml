@@ -26,6 +26,8 @@
         version: amit/v1
         force: yes
 
+    # - name: 
+
     # - name: Startup the application through pm2 
     #   command: pm2 startup
 
