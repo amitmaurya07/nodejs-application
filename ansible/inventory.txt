@@ -1,5 +1,5 @@
 [nodejs_servers_version_v1]
-172.31.43.82 ansible_ssh_user=ubuntu ansible_ssh_privae_key=$Vm.pem
+172.31.43.82 
 
 [nodejs_servers_version_v2]
-172.31.43.82 ansible_ssh_user=ubuntu
+172.31.43.82 
